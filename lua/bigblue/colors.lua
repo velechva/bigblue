@@ -5,15 +5,19 @@ local config = require("bigblue.config")
 ---@class ColorScheme
 local colors = {
   none = "NONE",
-  bg_dark = "#1f2335",
-  bg = "#24283b",
+
+  bg_dark = "#454d71",
+  bg = "#454d71",
   bg_highlight = "#292e42",
-  fg = "#c0caf5",
-  fg_dark = "#a9b1d6",
+  fg = "#ffffff",
+  fg_dark = "#ffffff",
   fg_gutter = "#3b4261",
+
+  comment = "#bbbbcc",
+
   dark3 = "#545c7e",
-  comment = "#565f89",
   dark5 = "#737aa2",
+
   blue0 = "#3d59a1",
   blue = "#7aa2f7",
   cyan = "#7dcfff",
@@ -31,8 +35,9 @@ local colors = {
   red1 = "#db4b4b",
   diff = { add = "#164846", delete = "#823c41", change = "#394b70" },
 }
+
 colors.black = util.darken(colors.bg_dark, 10)
-if config.style == "night" then colors.bg = "#1a1b26" end
+
 colors.border_highlight = colors.blue0
 colors.border = colors.black
 
@@ -50,7 +55,6 @@ colors.info = colors.teal
 colors.hint = colors.info
 
 util.bg = colors.bg
--- util.fg = colors.fg
 
 return colors
 
